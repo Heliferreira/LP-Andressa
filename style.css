@@ -1539,37 +1539,99 @@ h1, h2, h3 {
   color: #FFFFFF;
 }
 
-/* ---------- BANNER DE CONTATO / CTA COM FOTO4 ---------- */
+/* ---------- RODAPÉ E CONTATO COM FUNDO BRANCO ---------- */
 .posicionamento-cta-banner {
   position: relative;
   width: 100%;
-  min-height: 520px;
-  background-image: url('assets/foto4.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 80px 20px;
+  background-color: #FFFFFF !important; /* Fundo branco */
+  background-image: none !important;    /* Remove qualquer foto de fundo */
+  padding: 70px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
 }
 
-/* Camada escura transparente por cima da foto para destacar o texto e os ícones */
-.posicionamento-cta-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(14, 26, 18, 0.78);
-  z-index: 1;
+/* Remove qualquer overlay escuro antigo */
+.posicionamento-cta-banner::before,
+.banner-overlay {
+  display: none !important;
 }
 
-/* Garante que o conteúdo fique acima da foto e da camada escura */
-.banner-content, 
-.banner-contact-info,
-.posicionamento-cta-banner .container {
-  position: relative;
-  z-index: 2;
+/* Textos principais do banner em preto */
+.posicionamento-cta-banner .banner-title,
+.posicionamento-cta-banner h2 {
+  color: #111111 !important;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.posicionamento-cta-banner .banner-sub,
+.posicionamento-cta-banner p {
+  color: #333333 !important;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Informações de contato e ícones em preto */
+.banner-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Botão de WhatsApp mantido no padrão da marca */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #E8A382;
+  color: #0E1A12;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.btn-whatsapp i {
+  font-size: 1.35rem;
+}
+
+/* E-mail e Instagram com texto preto */
+.banner-contact-info .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #222222 !important;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.banner-contact-info .contact-item i {
+  color: #E8A382; /* Mantém o ícone colorido em destaque */
+  font-size: 1.1rem;
+}
+
+/* Rodapé geral da página também com fundo limpo */
+.site-footer {
+  background-color: #FFFFFF !important;
+  color: #333333 !important;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #eaeaea;
+}
+
+.site-footer p {
+  color: #333333 !important;
+  font-size: 0.9rem;
 }
 
 /* ---------- RESPONSIVO PARA TELAS MENORES (MOBILE) ---------- */
