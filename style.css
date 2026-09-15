@@ -1604,20 +1604,24 @@ h1, h2, h3 {
   font-size: 1.35rem;
 }
 
-/* E-mail e Instagram com texto preto */
+/* Retorna o e-mail e Instagram para branco */
 .banner-contact-info .contact-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #222222 !important;
+  color: #FFFFFF !important; /* <--- Deixa o texto em branco */
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
 }
 
 .banner-contact-info .contact-item i {
-  color: #E8A382; /* Mantém o ícone colorido em destaque */
+  color: #E8A382; /* Mantém os ícones em destaque */
   font-size: 1.1rem;
+}
+
+.banner-contact-info .contact-item:hover {
+  opacity: 0.85;
 }
 
 /* Rodapé geral da página também com fundo limpo */
