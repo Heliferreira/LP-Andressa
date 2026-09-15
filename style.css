@@ -1539,7 +1539,40 @@ h1, h2, h3 {
   color: #FFFFFF;
 }
 
-/* Responsivo para telas menores */
+/* ---------- BANNER DE CONTATO / CTA COM FOTO4 ---------- */
+.posicionamento-cta-banner {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  background-image: url('assets/foto4.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Camada escura transparente por cima da foto para destacar o texto e os ícones */
+.posicionamento-cta-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 26, 18, 0.78);
+  z-index: 1;
+}
+
+/* Garante que o conteúdo fique acima da foto e da camada escura */
+.banner-content, 
+.banner-contact-info,
+.posicionamento-cta-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- RESPONSIVO PARA TELAS MENORES (MOBILE) ---------- */
 @media (max-width: 768px) {
   .posicionamento-cta-banner {
     min-height: auto;
