@@ -1420,7 +1420,7 @@ h1, h2, h3 {
   header img, 
   .logo img, 
   .logo-img {
-    max-width: 130px !important; /* Reduz a logo para o topo */
+    max-width: 190px !important; /* Reduz a logo para o topo */
     height: auto !important;
   }
 
